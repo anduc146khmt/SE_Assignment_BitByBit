@@ -1,6 +1,8 @@
 # Software Engineering Project - HK221
 
-A UWC 2.0 used to provide solution to Urban Waste Collection Problems. More description will be found in our report.
+A UWC 2.0 System used to provide an effective solution to Urban Waste Collection Problems. 
+
+More description will be found in our report.
 
 # Contributor
 We are students studying Computer Science come from group **BIT BY BIT** at Bach Khoa University (HCMUT)
