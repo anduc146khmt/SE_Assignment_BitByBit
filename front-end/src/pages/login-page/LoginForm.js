@@ -1,24 +1,24 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 //@mui
 import {
   TextField,
   Avatar,
-  Button, 
+  Button,
   Typography,
   Box,
   Container,
   InputAdornment,
   IconButton,
-} from "@mui/material";
+} from '@mui/material';
 // components
-import Iconify from "../../components/iconify";
+import Iconify from '../../components/iconify';
 
 //-------------------------------------------------
 
 const initialFValues = {
-  username: "",
-  password: "",
+  username: '',
+  password: '',
 };
 
 // -------------------------------------------------
@@ -41,15 +41,15 @@ export default function LoginForm() {
 
   const validate = (fieldValues = values) => {
     let temp = { ...errors };
-    if ("username" in fieldValues)
-      temp.username = fieldValues.username ? "" : "Điền tên tài khoản!";
-    if ("password" in fieldValues)
-      temp.password = fieldValues.password ? "" : "Điền mật khẩu";
+    if ('username' in fieldValues)
+      temp.username = fieldValues.username ? '' : 'Điền tên tài khoản!';
+    if ('password' in fieldValues)
+      temp.password = fieldValues.password ? '' : 'Điền mật khẩu';
     setErrors({ ...temp });
 
     // return true if there're any errors
     if (fieldValues === values)
-      return Object.values(temp).every((x) => x === "");
+      return Object.values(temp).every((x) => x === '');
   };
 
   const resetForm = () => {
@@ -60,7 +60,7 @@ export default function LoginForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      navigate("/app", { replace: true });
+      navigate('/app', { replace: true });
       resetForm();
     }
   };
@@ -70,12 +70,15 @@ export default function LoginForm() {
       <Box
         sx={{
           marginTop: 3,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        <Avatar alt="Logo" src="/assets/images/logo.png" sx={{ width: 100, height: 100, m: 1 }} />
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}>
+        <Avatar
+          alt="Logo"
+          src="/assets/images/logo.png"
+          sx={{ width: 100, height: 100, m: 1 }}
+        />
         <Typography component="h1" variant="h4">
           Đăng nhập
         </Typography>
@@ -105,16 +108,15 @@ export default function LoginForm() {
               error: true,
               helperText: errors.password,
             })}
-            type={showPassword ? "text" : "password"}
+            type={showPassword ? 'text' : 'password'}
             InputProps={{
               endAdornment: (
                 <InputAdornment position="end">
                   <IconButton
                     onClick={() => setShowPassword(!showPassword)}
-                    edge="end"
-                  >
+                    edge="end">
                     <Iconify
-                      icon={showPassword ? "eva:eye-fill" : "eva:eye-off-fill"}
+                      icon={showPassword ? 'eva:eye-fill' : 'eva:eye-off-fill'}
                     />
                   </IconButton>
                 </InputAdornment>
@@ -127,8 +129,7 @@ export default function LoginForm() {
             fullWidth
             variant="contained"
             sx={{ height: 50, mt: 3, mb: 2 }}
-            onClick={handleSubmit}
-          >
+            onClick={handleSubmit}>
             Đăng nhập
           </Button>
         </Box>
