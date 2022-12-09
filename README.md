@@ -17,4 +17,4 @@ Our member of the team:
 * Võ Thái Toàn – 2010709
 
 # Contact
-If you have any questions, please contact me via email: ducan1406@gmail.com
+If you have any questions, please contact me via email: ducan1406@gmail.com.
